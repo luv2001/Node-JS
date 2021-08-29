@@ -1,0 +1,76 @@
+create/use Database
+    => use <databaseName>
+
+drop Database
+    => db.dropDatabase()
+
+show Database
+    => show dbs 
+
+show collections
+    => show collections
+
+ // naruto --> My collection Name
+
+create/drop collections
+    => db.createCollection('naruto')  --> create Collection
+    =>db.naruto.drop()   -->   drop collection
+
+create/insert row ( // into naruto )
+    => db.naruto.insert({
+        "name" : "Shikamaru",
+        "level" : "Jonin"
+    })
+
+
+create/insert many rows 
+    => db.naruto.insertMany([
+        {
+        "name" : "Shikamaru",
+        "level" : "Jonin"
+        },
+        {
+        "name" : "Kakashi Sensai",
+        "level" : "Jonin"
+        },
+         {
+        "name" : "Saske",
+        "level" : "Genin",
+        "clan" : "Uchita",
+        "goal" : "Revenge from Itachi"
+        },
+          {
+        "name" : "Naruto",
+        "level" : "Genin",
+        "clan" : "noClan --> Demon fox ",
+        "goal" : "To become hocage"
+        },
+    ])
+
+Show all rows of collection 
+    => db.naruto.find()
+    => db.naruto.find().pretty()
+
+Search in MongoDB databse
+    => db.naruto.find({"level" : "Genin"}).pretty()
+    => db.naruto.find({"level" : "Genin"}).pretty().limit(1)  --> ( // limit Only one ) 
+    => db.naruto.find({"level" : "Jonin"}).pretty().count()   --> Count no. of rows 
+
+db.naruto.insertMany([
+    {
+        "name" : "Luv",
+        "Age" : 19
+    },
+     {
+        "name" : "Kush",
+        "Age" : 19
+    },
+    {
+        "name" : "KaramDas",
+        "Age" : 18
+    },
+    {
+        "name" : "Rohan",
+        "Age" : 12
+    },
+])    
