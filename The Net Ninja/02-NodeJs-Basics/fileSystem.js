@@ -24,6 +24,11 @@ const fs = require('fs')
 //     fs.mkdir("./compo", () => { })
 // }
 
-if (fs.existsSync("./docs/deleteme.txt")) {
-    fs.unlink("./docs/deleteme.txt", () => { }) // delete files
+// if (fs.existsSync("./docs/deleteme.txt")) {
+//     fs.unlink("./docs/deleteme.txt", () => { }) // delete files
+// }
+
+if (fs.existsSync("./docs/io.txt")) {
+    fs.unlink("./docs/io.txt", () => { })
 }
+
