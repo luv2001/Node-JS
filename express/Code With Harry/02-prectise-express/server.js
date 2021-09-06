@@ -1,10 +1,11 @@
 const express = require('express')
 const port = 3004
+const path = require('path')
 
 const app = express()
 
-app.get('/', (req, res) => {
-    res.send("Kaise Ho bhai")
-})
+app.use('/', require(path.join(__dirname, 'routes/blog')))
 
 app.listen(port, () => { })
+
+//super Clean express JS routing
