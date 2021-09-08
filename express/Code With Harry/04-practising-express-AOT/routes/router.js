@@ -3,6 +3,7 @@ const path = require('path');
 
 const titans = require('../data/titans')
 
+
 router.get('/', (req, res) => {
     // res.sendFile(path.join(__dirname, "../templates/index.html"))
     res.render("home", {
@@ -10,18 +11,14 @@ router.get('/', (req, res) => {
     })
 })
 
-// router.get("/titan-list", (req, res) => {
-//     res.render("titan-list", {
-//         titans: titans
-//     })
-// })
 
 router.get('/titans/:slug', (req, res) => {
-    const requireTitan = titans.filter(e => {
+    const Titan = titans.filter(e => {
         return e.slug === req.params.slug;
     })
-    const titanSlug = requireTitan[0].slug + ".html"
-    res.sendFile(path.join(__dirname, `../templates/Titans/${titanSlug}`))
+    res.render("titan", {
+        Titan: Titan
+    })
 })
 
 module.exports = router;
