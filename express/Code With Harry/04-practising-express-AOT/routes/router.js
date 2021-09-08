@@ -5,14 +5,16 @@ const titans = require('../data/titans')
 
 router.get('/', (req, res) => {
     // res.sendFile(path.join(__dirname, "../templates/index.html"))
-    res.render("home")
-})
-
-router.get("/titan-list", (req, res) => {
-    res.render("titan-list", {
+    res.render("home", {
         titans: titans
     })
 })
+
+// router.get("/titan-list", (req, res) => {
+//     res.render("titan-list", {
+//         titans: titans
+//     })
+// })
 
 router.get('/titans/:slug', (req, res) => {
     const requireTitan = titans.filter(e => {
