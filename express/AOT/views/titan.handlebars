@@ -1,0 +1,24 @@
+
+{{#each Titan}}
+<div class="section">
+      <h1>{{this.name}}</h1>
+      <h2>Current Holder : {{this.currentHolder}}</h2>
+      <div class="card" style="width: 18rem">
+        <img
+          src="{{this.image}}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          {{!-- <a href="https://nodejs-aot.herokuapp.com/" class="btn btn-primary">HOME Heroku</a> --}}
+          <a href="http://localhost:8080/" class="btn btn-primary">HOME local host</a>
+
+        </div>
+      </div>
+    </div>
+{{/each}}

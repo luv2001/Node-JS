@@ -1,0 +1,16 @@
+body {
+  background: red;
+  height: 300px;
+  width: 400px;
+}
+.section {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  color: orangered;
+}
