@@ -1,0 +1,10 @@
+GET http://localhost:3000/anime
+
+###
+
+POST http://localhost:3000/anime
+Content-Type: application/json
+{
+    "name"  :"Naruto",
+    "episodes" : 152
+}

@@ -1,0 +1,11 @@
+GET http://localhost:3000/titans
+
+###
+
+POST http://localhost:3000/titans
+Content-Type : "application/json"
+
+{
+    "name"  : "Atatck Titan" , 
+    "currentHolder" : "Eren yeager" 
+}
