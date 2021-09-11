@@ -54,6 +54,29 @@ router.post('/', async (req, res) => {
     }
 })
 
+router.patch('/:id', async (req, res) => {
+    let Quote_patch = ({                    // Defined Quote_patch
+        quote: "",
+        author: "",
+    })
+
+    Quote_patch = await Quote.findById(req.params.id) // Match ID
+
+    if (req.body.quote != null) {
+        Quote_patch.quote = req.body.quote
+    }
+    if (req.body.author != null) {
+        Quote_patch.author = req.body.author
+    }
+    try {
+        const updatedQuote = await Quote_patch.save()
+        res.json(updatedQuote)
+    }
+    catch (err) {
+        console.log(err)
+    }
+})
+
 async function getQuote(req, res, next) {
     let Quote_getQuote
     try {
